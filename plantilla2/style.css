@@ -1,0 +1,108 @@
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background: linear-gradient(135deg, black 25%, transparent 25%) -50px 0, linear-gradient(225deg, black 25%, transparent 25%) -50px 0, linear-gradient(315deg, black 25%, transparent 25%), linear-gradient(45deg, black 25%, transparent 25%);
+            background-size: 2em 2em;
+            background-color: #232323;
+            font-family: 'Noto Serif', serif;
+            color: aliceblue;
+        }
+        /*Header*/
+        
+        .title h1 {
+            padding: 20px 0;
+            text-align: center;
+            font-size: 2.9em;
+            text-transform: uppercase;
+        }
+        
+        .conteiner {
+            background: rgba(255, 255, 255, 0.055);
+            width: 90%;
+            max-width: 1000px;
+            margin: 1.6em auto;
+            display: grid;
+            gap: 2em;
+            grid-template-columns: repeat(5, 1fr);
+        }
+        
+        .conteiner>.logo,
+        .conteiner>.content,
+        .conteiner>.sidebar,
+        .conteiner>.footer,
+        .conteiner>div {
+            background-color: #1e272e49;
+            padding: 15px;
+            border: 1px solid #fff;
+        }
+        
+        .conteiner .logo,
+        .conteiner .footer {
+            grid-column: 1/6;
+            background: #1e272e
+        }
+        
+        .conteiner>.content {
+            grid-column: span 3;
+        }
+        
+        .content>.article {
+            background: #232323;
+            padding: 20px;
+            margin-top: 5px;
+            color: #fff;
+        }
+        
+        .content .article h1,
+        .content .article p {
+            padding: 10px;
+        }
+        
+        .conteiner.sidebar img {
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .conteiner>.sidebar {
+            grid-column: span 2;
+            background: #485460;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .conteiner>.posts {
+            background: #2d3436;
+            color: #ffffff;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s ease;
+        }
+        
+        .conteiner>.posts:hover {
+            cursor: pointer;
+            color: #000000;
+            background: #fff;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .header {
+                text-align: center;
+            }
+            .conteiner .content {
+                grid-column: 1/-1;
+            }
+            .conteiner.sidebar {
+                grid-column: 1/6;
+            }
+            .conteiner .posts {
+                grid-column: 1/-1;
+            }
+        }
