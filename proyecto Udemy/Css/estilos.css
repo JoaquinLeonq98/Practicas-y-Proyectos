@@ -1,0 +1,253 @@
+          :root {
+             --negro: #212121;
+             --morado: #931ada;
+             --blanco: #ffffff;
+             --oscuro: #16012b;
+             --gris: #575757;
+         }
+         
+         html {
+             font-size: 62.5%;
+             box-sizing: border-box;
+             scroll-snap-type: y mandatory;
+         }
+         
+         *,
+         *:before,
+         *:after {
+             box-sizing: inherit;
+         }
+         
+         body {
+             font-size: 16px;
+             background: #0f0c29;
+             /* fallback for old browsers */
+             background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+             /* Chrome 10-25, Safari 5.1-6 */
+             background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+             /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+         }
+         
+         h1 {
+             font-size: 3.8rem;
+             text-align: center;
+             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+             color: #ffffff;
+         }
+         
+         h2 {
+             font-size: 2.8rem;
+             color: #931ada;
+         }
+         
+         h3 {
+             font-size: 1.8rem;
+             ;
+         }
+         
+         h1,
+         h2,
+         h3 {
+             text-align: center;
+         }
+         
+         span {
+             font-size: 2rem;
+         }
+         
+         .nav_br {
+             color: var(--oscuro);
+             background: var(--morado);
+         }
+         /** Scroll Snap**/
+         
+         .servicios,
+         .navegacion,
+         .formulario {
+             scroll-snap-align: center;
+             scroll-snap-stop: mandatory;
+         }
+         
+         .boton {
+             background-color: var(--morado);
+             color: var(--oscuro);
+             padding: 1rem 3rem;
+             margin-top: 3rem;
+             font-size: 2rem;
+             text-decoration: none;
+             text-transform: uppercase;
+             font-weight: bold;
+             border-radius: .5rem;
+             border: none;
+         }
+         
+         @media (min-width: 768px) {
+             .boton {
+                 width: auto;
+             }
+         }
+         
+         .boton:hover {
+             cursor: pointer;
+         }
+         
+         .sombra {
+             -webkit-box-shadow: -1px 3px 11px 0px rgba(0, 0, 0, 0.74);
+             -moz-box-shadow: -1px 3px 11px 0px rgba(0, 0, 0, 0.74);
+             box-shadow: -1px 3px 11px 0px rgba(0, 0, 0, 0.74);
+             margin: 2rem 12.5rem;
+             background: var(--negro);
+             border-radius: 1rem;
+         }
+         
+         .navegacion {
+             text-align: center;
+             display: flex;
+             flex-direction: column;
+         }
+         
+         .navegacion a {
+             color: #212121;
+             text-decoration: none;
+             font-size: 1.7rem;
+             font-weight: 700;
+             padding: 1rem;
+         }
+         
+         @media (min-width: 768px) {
+             .navegacion {
+                 flex-direction: row;
+                 justify-content: space-evenly;
+                 align-items: center;
+             }
+         }
+         
+         .navegacion a:hover {
+             background-color: var(--oscuro);
+             padding: 1rem;
+             color: var(--morado);
+         }
+         
+         .subtitulo {
+             background-image: url(../img/macbook-624707_1920.jpg);
+             background-repeat: no-repeat;
+             background-size: cover;
+             height: 450px;
+             position: relative;
+         }
+         
+         .sub {
+             position: absolute;
+             background-color: rgba(33, 33, 33, 0.624);
+             width: 100%;
+             height: 100%;
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             justify-content: center;
+         }
+         
+         .sub h2,
+         .sub p {
+             color: var(--blanco);
+         }
+         
+         .red {
+             display: flex;
+             align-items: flex-end;
+         }
+         
+         .red p {
+             margin: 0;
+         }
+         /** Servicios**/
+         
+         .servicios {
+             text-align: center;
+             display: flex;
+             flex-direction: column;
+         }
+         
+         .servicio {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+         }
+         
+         .servicio h3 {
+             color: var(--blanco);
+         }
+         
+         .servicio p {
+             line-height: 2;
+             color: #ffffff;
+         }
+         
+         .servicio .icono {
+             height: 15rem;
+             width: 15rem;
+             background: #931ada;
+             border-radius: 50%;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+         }
+         
+         @media (min-width: 768px) {
+             .servicios_grid {
+                 display: grid;
+                 grid-template-columns: repeat(3, 1fr);
+             }
+         }
+         /**Contacto**/
+         
+         .formulario {
+             background-color: var(--gris);
+             border: #ffffff, 1px;
+             width: min(60rem, 100%);
+             margin: 2rem auto;
+             padding: 2rem;
+             border-radius: 1rem;
+         }
+         
+         .formulario fieldset {
+             border: none;
+         }
+         
+         .formulario legend {
+             margin: auto;
+             margin-bottom: 2rem;
+             text-align: center;
+             font-size: 1.8rem;
+             text-transform: uppercase;
+             font-weight: 700;
+         }
+         
+         .campo {
+             margin-bottom: 1rem;
+         }
+         
+         .campo label {
+             font-weight: bold;
+             margin-bottom: .5rem;
+             display: block;
+             font-size: 2rem;
+         }
+         
+         .input-text {
+             background: #0f0c29;
+             /* fallback for old browsers */
+             background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+             /* Chrome 10-25, Safari 5.1-6 */
+             background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+             /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+             width: 100%;
+             border: none;
+             padding: 1.5rem;
+             border-radius: 1.5rem;
+             color: white;
+         }
+         
+         .enviar .boton {
+             width: 100%;
+         }
